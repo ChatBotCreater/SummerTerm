@@ -1,0 +1,51 @@
+version: "3.1"
+
+rules:
+
+- rule: Provide information on summer term conditions
+  steps:
+  - intent: summer_term_conditions
+  - action: utter_summer_term_conditions
+
+- rule: Provide information on CGPA improvement in summer term
+  steps:
+  - intent: cgpa_improvement
+  - action: utter_cgpa_improvement
+
+# Additional rule if the grade entity is detected with summer_term_conditions intent
+- rule: Response to summer term conditions based on grade
+  condition:
+  - slot_was_set:
+      - grade: any  # Matches any value for grade
+  steps:
+  - intent: summer_term_conditions
+  - action: utter_summer_term_conditions
+
+# Additional rule if the course_count entity is detected with cgpa_improvement intent
+- rule: Response to CGPA improvement based on number of courses
+  condition:
+  - slot_was_set:
+      - course_count: any  # Matches any value for course_count
+  steps:
+  - intent: cgpa_improvement
+  - action: utter_cgpa_improvement
+  
+- rule: Respond to course limits and exceptions queries
+  steps:
+  - intent: course_limits_and_exceptions
+  - action: utter_course_limits_and_exceptions
+
+- rule: Provide information about class format
+  steps:
+  - intent: class_format_query
+  - action: utter_class_format_info
+
+- rule: Provide information about course administration
+  steps:
+  - intent: course_administration
+  - action: utter_course_administration
+
+- rule: Providing time table link to the students
+  steps:
+  - intent: summer_term_timetable
+  - action: utter_summer_term_timetable

@@ -1,0 +1,97 @@
+version: '3.1'
+intents:
+- cgpa_improvement
+- class_format_query
+- course_administration
+- course_limits_and_exceptions
+- summer_term_conditions
+- summer_term_timetable
+entities:
+- cgpa
+- grade
+- course_count
+- term_detail
+- financial_detail
+- role
+- schedule
+- fees
+- conditions
+slots:
+  grade:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: grade
+  course_count:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: course_count
+  term_detail:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: term_detail
+  financial_detail:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: financial_detail
+  role:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: role
+  schedule:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: schedule
+  fees:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: fees
+responses:
+  utter_summer_term_conditions:
+  - text: The summer term offers backlog courses for final year students with 'E', 'F', or 'X' grades or those admitted in December, limited to three courses, provided there's faculty availability. DoAA has authority to make course allotments. For students with less than four members in a course, it's offered as a self-study, unless they have 'F' or 'X' grades. The schedule, fees, and other conditions are subject to Chairperson, Senate's approval, based on DoAA's recommendations.
+  - text: In the summer term, final year students with certain grades or those admitted in December can take up to three backlog courses. If conditions permit, the DoAA can assign up to four courses. Self-study courses are an option if less than four students enroll, but not for 'F' or 'X' graded students. The summer term's details depend on the Chairperson, Senate's decisions.
+  - text: Final year students securing grades 'E', 'F', or 'X' can enroll in up to three backlog courses in summer, subject to faculty availability. The DoAA can, in specific cases, assign up to four courses. If a course has less than four students, it's self-study unless you have an 'F' or 'X' grade. All summer term decisions, including schedule and fees, are under the Chairperson, Senate's jurisdiction.
+  - text: Summer term allows final year students with specific grades or those admitted in December to take a maximum of three backlog courses. Under certain conditions, the DoAA can allocate up to four courses. Courses with fewer than four students are self-study, but exceptions exist for 'F' and 'X' grades. The Chairperson, Senate approves the term's conditions.
+  utter_cgpa_improvement:
+  - text: If you aim to improve your CGPA, the summer term is an option. Subjects in which you've scored C or C- can be retaken for better grades. However, this is contingent on the availability of faculty. All decisions regarding course allocation for improvement are made by DoAA.
+  - text: Improving your CGPA is possible during the summer term. You can opt to improve in subjects where you've secured C or C-, but this is subject to faculty availability. The final decision on course allotments for CGPA improvement is taken by the DoAA.
+  utter_class_format_info:
+  - text: Regular classes during the summer term are held if there are enough enrollments. A minimum of four students are required for a regular class. If there are fewer than four students enrolled in a course, it's offered as a self-study. However, students with grades like {grade} aren't allowed to take self-study courses in the summer term.
+  - text: For a regular class in the summer term, we need at least four students. Courses with fewer students are switched to self-study, but this isn't applicable for students with {grade} grades.
+  - text: "Summer term has a criterion: regular classes need at least four students. If enrollments are lower, the class is given as self-study. But, students with {grade} grades can't opt for self-study."
+  utter_course_limits_and_exceptions:
+  - text: During the summer term, final year students with 'E', 'F', or 'X' grades, as well as those admitted in December, are eligible to enroll in up to three backlog courses. In specific cases, the DoAA has the authority to assign up to four courses. If a course has fewer than four students, it's offered as a self-study course, with the exception of students with 'F' or 'X' grades.
+  - text: In the context of the summer term, there are course limits and exceptions. Final year students with grades 'E', 'F', or 'X', and students admitted in December, can opt for a maximum of three backlog courses. However, there are instances where the DoAA may permit up to four courses. If a course's enrollment falls below four students, it transitions to self-study, except for those with 'F' or 'X' grades.
+  - text: For the summer term, certain course limits and exceptions apply. Students in their final year with 'E', 'F', or 'X' grades, and those admitted in December, can take a maximum of three backlog courses. The DoAA holds the discretion to allocate up to four courses under specific circumstances. Courses with less than four students are conducted as self-study, excluding students with 'F' or 'X' grades.
+  - text: The summer term has specific course limits and exceptions. Final year students with 'E', 'F', or 'X' grades, as well as students admitted in December, have the opportunity to enroll in up to three backlog courses. In exceptional situations, the DoAA can assign up to four courses. If a course's enrollment is less than four students, it's offered as self-study, except for students with 'F' or 'X' grades.
+  utter_course_administration:
+  - text: The summer term schedule and fees are approved by the Chairperson, Senate based on the DoAA's recommendations. The conditions for the summer term are recommended by the DoAA. The final decision in running summer term courses is made by the Senate. Instructors in a self-study course primarily guide and provide necessary resources to the students but don't conduct regular classes.
+  - text: The approval of the summer term schedule and fees rests with the Chairperson, Senate, acting on the recommendations of the DoAA. The DoAA is responsible for suggesting the conditions of the summer term. The ultimate authority in the operation of summer term courses lies with the Senate. In self-study courses, instructors play a role in guiding and supporting students without holding traditional classes.
+  - text: The Chairperson, Senate approves the schedule and fees for the summer term based on the DoAA's recommendations. The conditions for the summer term are suggested by the DoAA. The ultimate decision-making power in running summer term courses is held by the Senate. Instructors of self-study courses serve as guides and providers of resources rather than conducting regular classes.
+  - text: The approval of the summer term's schedule and fees is within the purview of the Chairperson, Senate, who consider the DoAA's recommendations. The DoAA puts forward the recommended conditions for the summer term. The final say in the operation of summer courses rests with the Senate. Instructors in self-study courses focus on guiding students and offering resources instead of delivering conventional lectures.
+  - text: The Chairperson, Senate is responsible for approving the summer term schedule and fees, taking into account the recommendations of the DoAA. The DoAA recommends the conditions for the summer term. The ultimate authority for managing summer courses lies with the Senate. In self-study courses, instructors play a supportive role by guiding students and providing resources.
+  utter_summer_term_timetable:
+  - text: Follow this link to order to Get the Time Table.
+actions:
+- utter_summer_term_timetable
+- utter_course_administration
+- utter_class_format_info
+- utter_summer_term_conditions
+- utter_cgpa_improvement
+- utter_course_limits_and_exceptions
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

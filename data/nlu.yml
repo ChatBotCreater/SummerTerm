@@ -1,0 +1,272 @@
+version: "3.1"
+nlu:
+- intent: course_limits_and_exceptions
+  examples: |
+    - How many backlog courses can I take in the summer?
+    - What is the course limit for the summer term if I have an [F](grade) grade?
+    - If I've got [4](backlog_number) backlogs, can I clear them all during the summer term?
+    - Can I take more than three backlog courses during summer?
+    - I have a [6.8](cgpa) CGPA, can I take extra courses to improve it?
+    - Are there exceptions to the number of courses I can enroll in during summer?
+    - I've secured an [E](grade) grade. How many backlog courses can I take up?
+    - Is it possible to take [5](backlog_number) courses in the summer term?
+    - What's the maximum number of courses I can take if I've got a [6.5](cgpa) CGPA?
+    - How does the DoAA decide on course limits during the summer term for someone with an [F](grade) grade?
+    - I heard the DoAA can allow up to [4](backlog_number) courses in the summer. Is that true?
+    - If I have more than three backlogs, what should I do?
+    - What if I want to take an improvement exam because I have a [6.9](cgpa)?
+    - Is there a special provision for students nearing completion of their degree?
+    - What are the regulations for taking courses in the summer if my CGPA is below [7](cgpa)?
+    - How are course limits decided for the summer term?
+    - Do December admitted students have a different course limit for the summer term?
+    - How many courses can I enroll in if I've an [X](grade) grade?
+    - Can you give me more details on course limits based on our grades?
+    - What are the exceptional cases for course limits in the summer term if I have a [6.2](cgpa)?
+    - I secured a [C](grade) last semester. Can I take it up for improvement in the summer?
+    - Can you tell me about course allocations by the DoAA for the summer term?
+    - What if I have [6](backlog_number) backlogs remaining?
+    - I'm falling short of a [7](cgpa) CGPA, are there extra courses I can take?
+    - How many courses can students with [E](grade) grade enroll in during the summer term?
+    - I have only [2](backlog_number) backlogs, can I clear them in the summer?
+    - My CGPA is currently [6.7](cgpa), how can the summer term help me?
+    - Can I take up to [3](backlog_number) courses during the summer term?
+    - I've [5](backlog_number) backlogs. What's the best course of action for the summer term?
+    - How many courses can I take if my grade is [X](grade) in the final semester?
+    - Can someone with a [6.4](cgpa) CGPA take extra courses in the summer?
+    - If I've secured an [F](grade) grade in two subjects, can I retake them in the summer term?
+    - What's the course limit for students with a [7.2](cgpa) wanting to improve?
+    - How does the course limit work if I've [3](backlog_number) backlogs?
+    - If my CGPA is [6.3](cgpa), can I take improvement exams for more than [3](backlog_number) subjects?
+    - I have a grade of [E](grade) in one subject. Can I take it up in the summer term?
+    - My friend told me students with [4](backlog_number) backlogs can take all in summer. Is it true?
+    - If I got an [E](grade) in three subjects, can I retake all of them in the summer term?
+    - Are there specific rules for students with a CGPA of [6.1](cgpa) regarding the summer term?
+    - Can I opt for extra courses in the summer if I have [4](backlog_number) backlogs?
+    - How does the backlog count affect the number of courses I can take in the summer term?
+    - Can a student with a [6.5](cgpa) CGPA take up to [4](backlog_number) courses?
+    - What are the provisions for students who have secured an [X](grade) grade?
+    - I need to improve my [6.8](cgpa) CGPA. How can the summer term help me?
+    - Can I take more courses in the summer term if I'm just [0.2](cgpa) short of a [7](cgpa) CGPA?
+    - I've [7](backlog_number) backlogs, how many can I clear during the summer?
+    - Are students with an [F](grade) grade allowed to take up backlog subjects in summer?
+    - How does CGPA below [7](cgpa) affect course allotment in the summer term?
+    - can a student get summer sem if having [6.9](cgpa) gpa ?
+- intent: summer_term_conditions
+  examples: |
+    - Can you tell me about the summer term conditions for [E](grade) grade students?
+    - How many courses can I take during the summer if I have an [F](grade) grade?
+    - What are the conditions for taking [3](course_count) courses during the summer term?
+    - I have [4](course_count) backlogs. Can I clear them all in the summer term?
+    - Can students with [X](grade) grades take self-study courses in the summer?
+    - What's the rule for summer term for those with an [F](grade) grade?
+    - I heard that if there are less than [4](course_count) students, the course is self-study. Is it true?
+    - How are the summer term conditions different for those admitted in December?
+    - If I have a grade of [E](grade), how many backlog courses can I take up in the summer term?
+    - Are there exceptions for those with an [F](grade) grade regarding self-study courses?
+    - What's the maximum course limit in summer term for students with [3](course_count) backlogs?
+    - I have an [X](grade) grade in one subject. Can I take it during summer?
+    - How does the DoAA decide on the number of courses for students with a grade of [F](grade)?
+    - I've got [2](course_count) backlogs. What are the conditions for the summer term?
+    - What if there are less than [4](course_count) students enrolled in a summer term course?
+    - Are the rules different for final year students with [X](grade) grades during the summer term?
+    - Can you clarify the summer term conditions for students who secured an [E](grade)?
+    - If I've [5](course_count) backlogs, can I take all subjects in the summer term?
+    - I secured a [C](grade) in a course. What are the conditions for taking it in the summer term?
+    - How are course allotments done by DoAA for students with [4](course_count) backlogs?
+    - What happens if less than [4](course_count) students register for a course in the summer term?
+    - Can I retake a course in the summer term if I have a grade of [E](grade)?
+    - What's the procedure for students with [4](course_count) backlogs during the summer term?
+    - How many courses can final year students with [E](grade) grades take in the summer?
+    - What are the terms for the summer course if only [3](course_count) students enroll?
+    - I got an [F](grade) grade in two subjects. Can I retake them in the summer?
+    - How does the summer term work if there are less than [4](course_count) students for a course?
+    - Can students with [4](course_count) backlogs enroll for all of them in the summer term?
+    - What's the policy on summer term courses for students with an [X](grade) grade?
+    - Are there any specific conditions for summer term if I've [3](course_count) backlogs?
+    - Can I take more courses in the summer term if I've got an [E](grade)?
+    - What if only [2](course_count) students register for a summer course? Is it still held?
+    - I've received an [E](grade) grade last semester. Can I retake the course in the summer term?
+    - How does the summer term handle courses with less than [4](course_count) students?
+    - I have [3](course_count) backlogs. What are my options in the summer term?
+    - How is the summer term structured for students with [F](grade) or [X](grade) grades?
+    - What if [4](course_count) students or more enroll for a course in the summer term?
+    - Can you explain the summer term rules for someone with an [E](grade) grade and [2](course_count) backlogs?
+    - How does the university handle summer courses with less than [4](course_count) students?
+    - What's the maximum number of backlog courses I can take in summer if I have a grade of [F](grade)?
+    - If only [3](course_count) students are enrolled, will the summer course be self-study?
+    - Can you provide info on the summer term conditions for [E](grade) and [F](grade) grade students?
+- intent: cgpa_improvement
+  examples: |
+    - Can I improve my CGPA in the summer term?
+    - How can I boost my grades during the summer term?
+    - Tell me about the CGPA improvement process in the summer.
+    - Is it possible to enhance my CGPA this summer?
+    - I got a C in a subject, can I retake it for CGPA improvement?
+    - I want to improve my grade from C- to B. Is summer term an option?
+    - Are there any opportunities in the summer term to upgrade my grades?
+    - I've heard students can increase their CGPA during the summer. How does that work?
+    - Can I retake subjects in which I scored C or C- during the summer term?
+    - How does the CGPA improvement work during the summer term?
+    - I'd like to understand the process to better my grades in the summer.
+    - What is the criteria for improving grades in the summer term?
+    - If I've received a C grade, can I improve it in the summer?
+    - How is the course allotment done for CGPA improvement in the summer term?
+    - Tell me more about improving my CGPA during summer.
+    - Is faculty availability a factor for retaking subjects in summer for better grades?
+    - Can you explain the summer term's grade improvement process?
+    - I'm thinking of retaking a few subjects to enhance my CGPA. How does summer term fit in?
+    - I've secured a C- in a course. How can I use the summer term to improve it?
+    - Who makes the decision on course allotment for CGPA improvement during summer?
+    - can i improve my cgpa in summer term ?
+    - i want to improve my grade in dsa from C- to A can i take summer term?
+    - having [B](grade) grade, can i take summer semester?
+- intent: class_format_query
+  examples: |
+    - Under what circumstances will regular classes be held during the summer term?
+    - When do we have regular classes in the summer?
+    - Tell me about regular class conditions for the summer term.
+    - How many students are needed to run a regular class in the summer term?
+    - What's the minimum student count for a summer regular class?
+    - I want to know the student count for holding regular classes during summer.
+    - What happens if there are fewer than four students enrolled in a course?
+    - How does class format change if less than four students enroll?
+    - If enrollment is below four, what happens to the course format?
+    - Are students with an 'F' grade allowed to take self-study courses in the summer term?
+    - Can a student having an [F](grade) grade take self-study courses?
+    - I got an [X](grade) grade. Can I go for self-study in summer?
+    - Are [X](grade) graded students allowed for self-study during summer?
+    - What about students with [F](grade) or [X](grade) grades? Can they opt for self-study?
+    - I've heard [F](grade) and [X](grade) graded students can't choose self-study. Is that true?
+    - Explain the class structure when there's low enrollment in summer.
+    - How does summer term handle classes with very few students?
+    - Can students with bad grades like [F](grade) take self-study options?
+    - Do [X](grade) graded students have restrictions in summer term courses?
+    - What's the policy for summer classes with fewer enrollments?
+    - in which mode the classes are taken in summer sem ?
+    - modes of classes in summer term ?
+- intent: course_administration
+  examples: |
+    - Who approves the summer term [schedule]{"entity": "entity", "value": "term_detail"} and [fees]{"entity": "entity", "value": "financial_detail"} for {course_count} courses?
+    - Who has the authority to finalize the [fees]{"entity": "entity", "value": "financial_detail"} for the {course_count} summer courses?
+    - For how many courses, {course_count}, is the summer [term]{"entity": "entity", "value": "term_detail"} schedule approved?
+    - Who decides on the summer term conditions for students with a {grade} grade?
+    - What's the role of an [instructor]{"entity": "entity", "value": "role"} if a student gets a {grade} in a self-study course?
+    - If I have a {grade} grade, who should I approach about [summer term policies]{"entity": "entity", "value": "term_detail"}?
+    - Can [students]{"entity": "entity", "value": "role"} with a {grade} grade decide the [fees]{"entity": "entity", "value": "financial_detail"} for their summer courses?
+    - Who gets the final say on the conditions for the {course_count} courses in the summer [term]{"entity": "entity", "value": "term_detail"}?
+    - In case there are {course_count} courses in the summer term, who decides their [schedule]{"entity": "entity", "value": "term_detail"}?
+    - If there's a [student]{"entity": "entity", "value": "role"} with a {grade} grade, who recommends the conditions for their summer term?
+    - Tell me about the [instructor's]{"entity": "entity", "value": "role"} role for {course_count} self-study courses.
+    - Who sets the conditions for summer term if I have {course_count} courses?
+    - Who recommends the [schedule]{"entity": "entity", "value": "term_detail"} for [students]{"entity": "entity", "value": "role"} with a {grade} grade in the summer term?
+    - For {course_count} courses in the summer term, who approves the [fees]{"entity": "entity", "value": "financial_detail"}?
+    - Who is responsible for the summer term if I get a grade of {grade}?
+    - Can you tell me about the summer term [policies]{"entity": "entity", "value": "term_detail"} for courses that have {course_count} students?
+    - How does the summer term operate for students who have a {grade} grade?
+    - Who can I talk to about the summer term [schedule]{"entity": "entity", "value": "term_detail"} if I am taking {course_count} courses?
+    - I would like to know who is in charge of setting the [fees]{"entity": "entity", "value": "financial_detail"} for {course_count} courses in the summer term.
+    - What's the role of the [instructor]{"entity": "entity", "value": "role"} in a self-study course if a student achieves a grade of {grade}?
+    - How are summer term [fees]{"entity": "entity", "value": "financial_detail"} determined for {course_count} courses?
+    - Who makes decisions about the summer term for students with a grade of {grade}?
+    - Can you explain the role of an [instructor]{"entity": "entity", "value": "role"} in a summer term if there are {course_count} courses?
+    - Who gives recommendations for the summer term [schedule]{"entity": "entity", "value": "term_detail"} and [fees]{"entity": "entity", "value": "financial_detail"}?
+    - What authority does the [instructor]{"entity": "entity", "value": "role"} have in the summer term for a student with a grade of {grade}?
+    - Who can tell me about the summer term [policies]{"entity": "entity", "value": "term_detail"} for {course_count} courses?
+    - How is the summer term structured for students with a grade of {grade}?
+    - Who has the final say about the summer term [schedule]{"entity": "entity", "value": "term_detail"} for {course_count} courses?
+    - Tell me about the role of the [instructor]{"entity": "entity", "value": "role"} if there are less than {course_count} students in a course.
+    - If I am taking {course_count} courses, who determines the summer term [fees]{"entity": "entity", "value": "financial_detail"}?
+    - Who is the main authority for the summer term [schedule]{"entity": "entity", "value": "term_detail"} for {course_count} courses?
+    - How are [students]{"entity": "entity", "value": "role"} with a {grade} grade treated in the summer term?
+    - I want to know about the summer term [policies]{"entity": "entity", "value": "term_detail"} for courses with {course_count} students.
+    - Who should I talk to if I have concerns about the summer term [fees]{"entity": "entity", "value": "financial_detail"} for {course_count} courses?
+    - Explain to me the role of the [instructor]{"entity": "entity", "value": "role"} in the summer term for a student with a grade of {grade}.
+    - Who is responsible for setting the [fees]{"entity": "entity", "value": "financial_detail"} for the summer term for {course_count} courses?
+    - I need information on the summer term [schedule]{"entity": "entity", "value": "term_detail"} for students with a grade of {grade}.
+    - Who oversees the summer term for {course_count} courses?
+    - How is the [schedule]{"entity": "entity", "value": "term_detail"} set for the summer term if there are {course_count} courses?
+    - If I have a grade of {grade}, who is my main contact for the summer term?
+    - Can you clarify the [instructor's]{"entity": "entity", "value": "role"} duties during the summer term for {course_count} courses?
+    - I want details on the summer term [fees]{"entity": "entity", "value": "financial_detail"} for students with a grade of {grade}.
+    - Who makes decisions regarding the summer term [schedule]{"entity": "entity", "value": "term_detail"} for {course_count} courses?
+    - Explain the summer term [policies]{"entity": "entity", "value": "term_detail"} for students who achieve a grade of {grade}.
+    - Who can give me a breakdown of the summer term [fees]{"entity": "entity", "value": "financial_detail"} for {course_count} courses?
+    - What's the role of the [instructor]{"entity": "entity", "value": "role"} for {course_count} courses in the summer term?
+    - If I want to know about the summer term [schedule]{"entity": "entity", "value": "term_detail"} for {course_count} courses, who should I ask?
+    - whom to contact if want to know about the summer term ?
+    - to whom we have to submit the details of summer term ?
+- intent: summer_term_timetable
+  examples: |
+    - What is the timetable for the summer term?
+    - Can you provide me with the summer term schedule?
+    - I'd like to know the timetable for the summer courses.
+    - How can I access the summer term schedule?
+    - Where can I find the timetable for the summer term?
+    - Is there a schedule available for the summer courses?
+    - Could you share the summer term timetable with me?
+    - When are the classes scheduled for the summer term?
+    - What are the timings for the summer courses?
+    - Can you give me information about the summer term schedule?
+    - What's the schedule for the summer term?
+    - Show me the timetable for the summer courses.
+    - Are there specific timings for the summer classes?
+    - What's the daily schedule for the summer term?
+    - Tell me when the summer term classes take place.
+    - I need to know the summer term timetable.
+    - Can you give me an overview of the summer courses schedule?
+    - How do I access the summer term class timings?
+    - What are the time slots for the summer term?
+    - Where can I find the summer term class schedule?
+    - What's the arrangement of classes in the summer term?
+    - Is the summer term timetable available online?
+    - Provide me with the details of the summer term classes.
+    - I'm interested in the timetable for the summer courses.
+    - Can you guide me to the summer term class schedule?
+    - Show me the class timings for the summer term.
+    - When do the summer term classes start and end?
+    - Give me an idea of the summer term class timings.
+    - What's the daily routine for the summer term courses?
+    - Where can I check the schedule for the summer term?
+    - What's the structure of the summer term timetable?
+    - Are the summer term class timings fixed?
+    - Can I get the summer term timetable details?
+    - Tell me the timings for the summer term classes.
+    - What are the hours for the summer term courses?
+    - Show me the summer term class timings.
+    - I'm curious about the summer term schedule.
+    - How can I find the summer term timetable?
+    - What's the duration of each summer term class?
+    - Provide me with the summer term schedule, please.
+    - Are the summer term classes at specific times?
+    - I want to know when the summer term classes are held.
+    - When do the summer term sessions take place?
+    - Can you give me the timetable for the summer courses?
+    - What's the layout of the summer term timetable?
+    - I need to see the schedule for the summer courses.
+    - How can I access the summer term class timings?
+    - Show me the class schedule for the summer term.
+    - When do the summer term classes typically occur?
+    - Provide me with information about the summer term schedule.
+    - Can you share the timings for the summer term courses?
+    - What's the daily routine for the summer term classes?
+    - time table for the summer semester
+- synonym: term_detail
+  examples: |
+    - schedule
+    - term
+    - summer term policies
+    - policies
+- synonym: financial_detail
+  examples: |
+    - fees
+- synonym: role
+  examples: |
+    - instructor
+    - students
+    - student
+    - instructor's
+- synonym: summer term
+  examples: |
+    - summer semester
+    - summer sem
+    - summer vacations

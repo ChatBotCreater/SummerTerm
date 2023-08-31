@@ -1,0 +1,62 @@
+version: "3.1"
+
+stories:
+
+- story: Ask about summer term conditions
+  steps:
+  - intent: summer_term_conditions
+  - action: utter_summer_term_conditions
+
+- story: Ask about CGPA improvement
+  steps:
+  - intent: cgpa_improvement
+  - action: utter_cgpa_improvement
+
+- story: Ask about summer term conditions with a specific grade
+  steps:
+  - intent: summer_term_conditions
+    entities:
+    - grade: "E"
+  - action: utter_summer_term_conditions
+
+- story: Ask about CGPA improvement with specific course count
+  steps:
+  - intent: cgpa_improvement
+    entities:
+    - course_count: 3
+  - action: utter_cgpa_improvement
+
+
+- story: class_format_testing
+  steps:
+  - intent: class_format_query
+  - action: utter_class_format_info
+
+- story: course_administration_queries
+  steps:
+  - intent: course_administration
+  - action: utter_course_administration
+
+- story: interactive_story
+  steps:
+  - intent: summer_term_conditions
+  - action: utter_summer_term_conditions
+  - intent: cgpa_improvement
+  - action: utter_cgpa_improvement
+
+- story: testingtwo
+  steps:
+  - intent: class_format_query
+  - action: utter_class_format_info
+  - intent: summer_term_conditions
+  - action: utter_summer_term_conditions
+
+
+- story: interactive_story
+  steps:
+  - intent: class_format_query
+  - action: utter_class_format_info
+  - intent: course_administration
+  - action: utter_course_administration
+  - intent: summer_term_timetable
+  - action: utter_summer_term_timetable
