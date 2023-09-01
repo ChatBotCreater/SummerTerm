@@ -51,6 +51,7 @@ nlu:
     - Are students with an [F](grade) grade allowed to take up backlog subjects in summer?
     - How does CGPA below [7](cgpa) affect course allotment in the summer term?
     - can a student get summer sem if having [6.9](cgpa) gpa ?
+    - how many subjects can i take in summer term , having [4](backlog_number) baclog courses
 - intent: summer_term_conditions
   examples: |
     - Can you tell me about the summer term conditions for [E](grade) grade students?
@@ -120,6 +121,7 @@ nlu:
     - can i improve my cgpa in summer term ?
     - i want to improve my grade in dsa from C- to A can i take summer term?
     - having [B](grade) grade, can i take summer semester?
+    - i want to improve my grade from [B](grade) to A can i take summer term
 - intent: class_format_query
   examples: |
     - Under what circumstances will regular classes be held during the summer term?
@@ -144,6 +146,7 @@ nlu:
     - What's the policy for summer classes with fewer enrollments?
     - in which mode the classes are taken in summer sem ?
     - modes of classes in summer term ?
+    - how the [classes](classes) of the summer term are [organized](organized)?
 - intent: course_administration
   examples: |
     - Who approves the summer term [schedule]{"entity": "entity", "value": "term_detail"} and [fees]{"entity": "entity", "value": "financial_detail"} for {course_count} courses?
@@ -250,6 +253,77 @@ nlu:
     - Can you share the timings for the summer term courses?
     - What's the daily routine for the summer term classes?
     - time table for the summer semester
+    - where is the time table for the summer term ?
+- intent: ask_summer_term_fees
+  examples: |
+    - How much is the fee for the [summer term](term_period)?
+    - What's the [summer term](term_period) cost?
+    - Can you tell me the cost for the [summer semester](term_period)?
+    - I want to know the [summer term](term_period) fees.
+    - How much do I need to pay for the [summer course](term_period)?
+    - What's the price for the [summer term](term_period)?
+    - How expensive is the [summer session](term_period)?
+    - Tell me about the [summer term](term_period) charges.
+    - What will be the fees for the [summer term](term_period)?
+    - I'd like to know the fees for the [summer session](term_period).
+    - What does the [summer term](term_period) tuition look like?
+    - Can you provide info on [summer](term_period) course fees?
+    - How much will I be charged for the [summer semester](term_period)?
+    - What are the costs associated with the [summer term](term_period)?
+    - I'm interested in the fees for the [summer](term_period) period.
+    - How much is the tuition for the [summer term](term_period)?
+    - Can you break down the [summer term](term_period) fees for me?
+    - I'm budgeting for the [summer term](term_period). How much should I allocate for fees?
+    - Provide me with the fee details of the [summer term](term_period).
+    - I'm planning for the [summer session](term_period). What are the costs?
+    - Let me know the charges for the [summer term](term_period).
+    - What's the tuition for the [summer semester](term_period)?
+    - What are the expected expenses for the [summer term](term_period)?
+    - How much do students typically pay for the [summer term](term_period)?
+    - Give me a breakdown of the [summer](term_period) term fees.
+    - Can I get a fee structure for the [summer term](term_period)?
+    - I need information on the [summer term](term_period) costs.
+    - Enlighten me about the [summer session](term_period) fees.
+    - What's the financial breakdown for the [summer term](term_period)?
+    - I'd like a list of charges for the [summer term](term_period).
+    - How much is charged for courses in the [summer](term_period)?
+    - Are there any discounts on [summer term](term_period) fees?
+    - I want a complete fee structure of the [summer semester](term_period).
+    - How much should I budget for the [summer term](term_period)?
+    - Tell me the complete tuition for the [summer session](term_period).
+    - What are the charges for the upcoming [summer term](term_period)?
+    - Provide a fee list for the [summer term](term_period).
+    - I need to plan for the [summer term](term_period). Tell me its costs.
+    - How much is the full fee for the [summer session](term_period)?
+    - What's the cost breakdown for the [summer term](term_period)?
+    - I'm inquiring about the [summer term](term_period) tuition fees.
+    - Could you list the fees for the [summer term](term_period)?
+    - Can you detail the costs associated with the [summer term](term_period)?
+    - I'd like to understand the [summer term](term_period) fee structure.
+    - What's the financial expectation for the [summer semester](term_period)?
+    - Enlighten me on the costs for the [summer term](term_period).
+    - I'm preparing for the [summer term](term_period). What are the charges?
+    - I want to understand the tuition for the [summer session](term_period).
+    - Provide me with a breakdown of the [summer term](term_period) expenses.
+    - I'm looking into the [summer term](term_period) costs. Can you help?
+    - what is the fees for the [summer term](term_period) ?
+- intent: ask_summer_self_study_courses
+  examples: |
+    - What [self-study](self_study) courses are available this [summer term](term_period)?
+    - Can you list the [summer](term_period) [independent study](self_study) courses?
+    - I'm interested in [self-paced](self_study) courses for the [summer term](term_period). What do you offer?
+    - Are there any [summer](term_period) courses I can take [on my own](self_study)?
+    - Show me the [self-study](self_study) course list for the [summer session](term_period).
+    - I'd like to enroll in a [self-learning](self_study) course this [summer term](term_period). What options do I have?
+    - Tell me about [summer](term_period) courses where I can learn at my own pace.
+    - Are there [self-directed](self_study) studies available during the [summer term](term_period)?
+    - I prefer studying independently. What [summer](term_period) courses cater to that?
+    - Which [self-study](self_study) modules are open for the [summer semester](term_period)?
+    - Can I get a list of [independent study](self_study) courses for this [summer](term_period)?
+    - What are the [self-taught](self_study) options for the upcoming [summer term](term_period)?
+    - Are there any [autonomous learning](self_study) opportunities this [summer session](term_period)?
+    - I'm curious about [self-guided](self_study) courses for the [summer](term_period). Can you provide information?
+    - How many [self-paced](self_study) courses are being offered this [summer term](term_period)?
 - synonym: term_detail
   examples: |
     - schedule
@@ -270,3 +344,7 @@ nlu:
     - summer semester
     - summer sem
     - summer vacations
+    - summer term
+    - summer session
+    - summer course
+    - summer period

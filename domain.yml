@@ -1,14 +1,20 @@
 version: '3.1'
 intents:
+- ask_summer_term_fees
 - cgpa_improvement
 - class_format_query
 - course_administration
 - course_limits_and_exceptions
 - summer_term_conditions
 - summer_term_timetable
+- ask_summer_self_study_courses
 entities:
-- cgpa
+- organized
+- term_period
 - grade
+- classes
+- backlog_number
+- cgpa
 - course_count
 - term_detail
 - financial_detail
@@ -16,6 +22,7 @@ entities:
 - schedule
 - fees
 - conditions
+- self_study
 slots:
   grade:
     type: text
@@ -85,13 +92,18 @@ responses:
   - text: The Chairperson, Senate is responsible for approving the summer term schedule and fees, taking into account the recommendations of the DoAA. The DoAA recommends the conditions for the summer term. The ultimate authority for managing summer courses lies with the Senate. In self-study courses, instructors play a supportive role by guiding students and providing resources.
   utter_summer_term_timetable:
   - text: Follow this link to order to Get the Time Table.
+  utter_ask_summer_term_fees:
+  - text: 'In general, the academic fees per subject is 12,000.For remaining Detailed information about hostel fees and other things you can follow this link: [Click here](YOUR_LINK_HERE).'
+  utter_ask_summer_self_study_courses:
+  - text: "Generally, courses having less than 4 students are organized as self-study courses. You can check the list at the following link: [Check List](YOUR_COURSE_LIST_LINK_HERE) after the overall registration of the courses. Also, you can check on your WebKiosk if you have applied for summer Semester."
 actions:
-- utter_summer_term_timetable
-- utter_course_administration
-- utter_class_format_info
-- utter_summer_term_conditions
 - utter_cgpa_improvement
 - utter_course_limits_and_exceptions
+- utter_summer_term_timetable
+- utter_ask_summer_term_fees
+- utter_class_format_info
+- utter_course_administration
+- utter_summer_term_conditions
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

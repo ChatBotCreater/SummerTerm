@@ -49,3 +49,36 @@ rules:
   steps:
   - intent: summer_term_timetable
   - action: utter_summer_term_timetable
+
+- rule: Provide summer term fees information when term_period is summer
+  steps:
+  - intent: ask_summer_term_fees
+    entities:
+    - term_period: "summer term"
+  - action: utter_ask_summer_term_fees
+
+- rule: Provide summer term fees information when term_period is summer semester
+  steps:
+  - intent: ask_summer_term_fees
+    entities:
+    - term_period: "summer semester"
+  - action: utter_ask_summer_term_fees
+
+- rule: Provide summer term fees information when term_period is summer session
+  steps:
+  - intent: ask_summer_term_fees
+    entities:
+    - term_period: "summer session"
+  - action: utter_ask_summer_term_fees
+
+- rule: Provide summer term fees information when term_period is summer session
+  steps:
+  - intent: ask_summer_term_fees
+    entities:
+    - term_period: "summer session"
+  - action: utter_ask_summer_term_fees
+
+- rule: Provide information on self-study courses for summer term
+  steps:
+  - intent: ask_summer_self_study_courses
+  - action: utter_ask_summer_self_study_courses
