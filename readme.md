@@ -15,7 +15,9 @@ Intents Covered are:
 Commands to run: 
 
 To enable the API 
+
 rasa run --enable-api --cors "http://localhost:8501"
 
 To run the app 
+
 streamlit run bot.py
